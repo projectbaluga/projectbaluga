@@ -681,6 +681,101 @@ a:hover {
 /* ============================================================
    Detailed project blocks
    ============================================================ */
+.project--case-study {
+  border-width: 2px;
+}
+
+.case-study__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.case-study__box {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.case-study__label {
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.case-study__box p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.case-study__solution {
+  background: var(--surface);
+  border-left: 3px solid var(--accent-2);
+  padding: 1rem;
+  font-size: 0.88rem;
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+}
+
+.case-study__solution strong {
+  color: var(--accent-2);
+}
+
+.architecture {
+  margin-bottom: 2.5rem;
+}
+
+.architecture__title {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.architecture__title::before {
+  content: "🏗️";
+}
+
+.architecture__table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.architecture__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.architecture__table th {
+  background: var(--bg-alt);
+  padding: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.architecture__table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.architecture__table tr:last-child td {
+  border-bottom: none;
+}
+
+.architecture__table strong {
+  color: var(--text);
+}
+
 .project {
   position: relative;
   background: var(--surface);

@@ -197,36 +197,122 @@
     <section class="section" id="projects">
       <div class="container">
         <h2 class="section__title"><span class="section__num">03.</span> Projects</h2>
-        <!-- FairLink -->
-        <article class="project">
+        <!-- FairLink Case Study -->
+        <article class="project project--case-study">
           <div class="project__head">
             <div>
-              <span class="project__eyebrow">Main Project · Full-Stack Platform</span>
+              <span class="project__eyebrow">Featured Case Study · Full-Stack Infrastructure</span>
               <h3 class="project__title">FairLink</h3>
-              <p class="project__tagline">ISP &amp; Hotspot Management System</p>
+              <p class="project__tagline">Automated ISP &amp; Hotspot Management System</p>
             </div>
             <div class="project__links">
-              <a href="https://github.com/projectbaluga/fairlink" target="_blank" rel="noopener" class="project__link">GitHub ↗</a>
+              <a href="https://github.com/projectbaluga/fairlink" target="_blank" rel="noopener" class="project__link">View Source ↗</a>
             </div>
           </div>
 
           <p class="project__overview">
-            A complete ISP &amp; hotspot management system built on the
-            <strong>MERN stack and Docker</strong>, with AI assisting
-            throughout development. It covers billing, subscriber CRM,
-            MikroTik router control, hotspot vouchers, a coin-operated kiosk
-            system, and an Android companion app for field work — all running
-            together as one containerized platform.
+            FairLink is a production-grade management platform for local ISPs, built to automate the entire lifecycle of a subscriber—from automated billing and MikroTik router enforcement to secure remote networking and AI-optimized diagnostics.
           </p>
 
-          <!-- At a glance -->
+          <!-- High-impact metrics -->
           <ul class="metrics">
-            <li><span class="metrics__num">6</span><span class="metrics__label">Docker services</span></li>
-            <li><span class="metrics__num">30+</span><span class="metrics__label">Data models</span></li>
-            <li><span class="metrics__num">58+</span><span class="metrics__label">UI components</span></li>
-            <li><span class="metrics__num">35+</span><span class="metrics__label">Backend tests</span></li>
-            <li><span class="metrics__num">12</span><span class="metrics__label">Dashboard modules</span></li>
+            <li><span class="metrics__num">~3s</span><span class="metrics__label">Billing Cycle (100+ users)</span></li>
+            <li><span class="metrics__num">1k+</span><span class="metrics__label">Est. Subs per Router</span></li>
+            <li><span class="metrics__num">6</span><span class="metrics__label">Docker Services</span></li>
+            <li><span class="metrics__num">Real-time</span><span class="metrics__label">MikroTik Sync</span></li>
           </ul>
+
+          <!-- The Challenges -->
+          <div class="case-study__grid">
+            <div class="case-study__box">
+              <h4 class="case-study__label">Challenge #1: High-Density Router Enforcement</h4>
+              <p>Naive API calls per subscriber would overwhelm MikroTik CPU. The system needed to sync state for hundreds of users without lag or service interruption.</p>
+              <div class="case-study__solution">
+                <strong>Solution:</strong> Implemented <strong>In-Memory Categorization</strong> and <strong>Persistent Connection Sharding</strong>. Commands are batched by router and state before execution, utilizing a single optimized API tunnel to reduce overhead by ~80%.
+              </div>
+            </div>
+            <div class="case-study__box">
+              <h4 class="case-study__label">Challenge #2: Secure Remote Networking</h4>
+              <p>RADIUS traffic needed to reach a containerized backend from remote field routers sitting behind restricted networks or CGNAT.</p>
+              <div class="case-study__solution">
+                <strong>Solution:</strong> Built a <strong>WireGuard VPN Mesh</strong> with custom <code>iptables</code> DNAT rules. RADIUS packets are routed through secure tunnels directly to the FreeRADIUS container, ensuring zero-config connectivity for field hardware.
+              </div>
+            </div>
+            <div class="case-study__box">
+              <h4 class="case-study__label">Challenge #3: Complex Billing & Idempotency</h4>
+              <p>Handling overflow days (e.g., Feb 28th for Day 31 subs) and preventing double-billing during automated daily cycles was critical for financial integrity.</p>
+              <div class="case-study__solution">
+                <strong>Solution:</strong> Developed an <strong>Idempotency Guard</strong> with last-billed markers and a <strong>Monthly Proration Formula</strong>. Added "Frozen Billing" for inactive users to prevent debt accumulation while disconnected.
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Decisions -->
+          <div class="project__detail">
+            <h4 class="project__detail-title">Technical Decisions: Why this stack?</h4>
+            <div class="project__detail-grid">
+              <div>
+                <h5>Docker &amp; Infrastructure</h5>
+                <p>Managed 6 distinct runtimes with <strong>isolated static networking</strong> (172.20.0.0/16). Used a read-only Docker Proxy to monitor metrics while maintaining a strict security boundary.</p>
+              </div>
+              <div>
+                <h5>MERN + Socket.io</h5>
+                <p>MongoDB's <strong>schema-less nature</strong> handled evolving subscriber states (SOS Access, Reactivate grants) without migrations. Socket.io provided the real-time backbone for technical support and kiosk control.</p>
+              </div>
+              <div>
+                <h5>AI-Driven Workflow</h5>
+                <p>Leveraged AI for <strong>edge-case diagnostics</strong> in the billing ledger and automated regression testing. I defined the business rules and network architecture; AI assisted in implementing complex state-machine interactions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architecture -->
+          <div class="architecture">
+            <h4 class="architecture__title">System Architecture (Docker Composite)</h4>
+            <div class="architecture__table-wrapper">
+              <table class="architecture__table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Technology</th>
+                    <th>Responsibility</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>API Backend</strong></td>
+                    <td>Node.js / Express</td>
+                    <td>The "Brain": Billing crons, MikroTik integration, RADIUS logic.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Frontend</strong></td>
+                    <td>React / Vite</td>
+                    <td>Admin Dashboard, Captive Portal, and Kiosk Interface.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Auth Server</strong></td>
+                    <td>FreeRADIUS</td>
+                    <td>Handles Hotspot/PPPoE auth, delegating decisions to API via REST.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>VPN Gateway</strong></td>
+                    <td>WireGuard</td>
+                    <td>Secure tunnel for remote routers with integrated traffic forwarding.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Database</strong></td>
+                    <td>MongoDB</td>
+                    <td>Persistence for subscribers, financial ledgers, and real-time logs.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Security Proxy</strong></td>
+                    <td>Docker Proxy</td>
+                    <td>Read-only metrics access, isolating the host Docker socket.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
           <!-- Screenshot carousel -->
           <p class="shots__label">📸 Live screenshots — tap any image for fullscreen</p>
@@ -312,63 +398,6 @@
             <div class="carousel__dots" data-dots></div>
           </div>
 
-          <div class="project__grid">
-            <div class="feature">
-              <h4>💳 Billing</h4>
-              <p>Automatic monthly invoicing, pro-rated charges, partial payments, and PDF statements.</p>
-            </div>
-            <div class="feature">
-              <h4>📊 Dashboard &amp; CRM</h4>
-              <p>Subscriber management, financial summaries, and a live map of field technicians.</p>
-            </div>
-            <div class="feature">
-              <h4>📡 Hotspot &amp; Vouchers</h4>
-              <p>FreeRADIUS authentication, bulk voucher printing, and live session monitoring.</p>
-            </div>
-            <div class="feature">
-              <h4>🌐 Router Control</h4>
-              <p>Direct MikroTik API integration — enable, disable, and monitor subscribers from the dashboard.</p>
-            </div>
-            <div class="feature">
-              <h4>🎮 Kiosk System</h4>
-              <p>Coin-operated PC sessions with ESP8266 hardware, remote lock/unlock, and receipt printing.</p>
-            </div>
-            <div class="feature">
-              <h4>🎫 Support &amp; Inventory</h4>
-              <p>Real-time ticket chat and barcode-based stock tracking.</p>
-            </div>
-            <div class="feature">
-              <h4>📱 Android App</h4>
-              <p>Field app for technicians: GPS reporting, tickets, and subscriber lookup.</p>
-            </div>
-            <div class="feature">
-              <h4>🔒 Security</h4>
-              <p>JWT auth, role-based permissions, encryption at rest, and account lockout.</p>
-            </div>
-          </div>
-
-          <!-- Under the hood -->
-          <div class="project__detail">
-            <h4 class="project__detail-title">How it works</h4>
-            <div class="project__detail-grid">
-              <div>
-                <h5>Architecture</h5>
-                <p>Six Docker services working together — React frontend, Express API, MongoDB, FreeRADIUS, WireGuard VPN, and a socket proxy.</p>
-              </div>
-              <div>
-                <h5>Real-time</h5>
-                <p>WebSockets keep technician GPS, ticket chat, and kiosk sessions in sync across every device.</p>
-              </div>
-              <div>
-                <h5>Automation</h5>
-                <p>The daily billing cycle, overdue-subscriber syncing to routers, and kiosk time deductions all run on their own.</p>
-              </div>
-              <div>
-                <h5>Networking</h5>
-                <p>Talks to MikroTik routers over API, handles both PPPoE and IPoE connections, and manages hotspot sessions end to end.</p>
-              </div>
-            </div>
-          </div>
 
           <ul class="project__tags">
             <li>React 18</li>
