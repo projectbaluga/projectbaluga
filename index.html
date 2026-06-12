@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Wilson Villanueva — developer from Camarines Sur. Builder of FairLink, an ISP & hotspot management platform on the MERN stack and Docker." />
+  <meta name="author" content="Wilson Villanueva" />
+  <meta name="keywords" content="Wilson Villanueva, ProjectBaluga, developer, FairLink, MERN, Docker, MikroTik, Camarines Sur" />
+  <meta name="theme-color" content="#6d5efc" />
+  <title>Wilson Villanueva — Developer</title>
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wilson Villanueva — Developer" />
+  <meta property="og:description" content="Builder of FairLink, an ISP & hotspot management platform on the MERN stack and Docker." />
+  <meta property="og:url" content="https://projectbaluga.github.io/portfolio/" />
+  <meta property="og:image" content="https://projectbaluga.github.io/portfolio/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wilson Villanueva — Developer" />
+  <meta name="twitter:description" content="Builder of FairLink, an ISP & hotspot management platform on the MERN stack and Docker." />
+  <meta name="twitter:image" content="https://projectbaluga.github.io/portfolio/assets/og-image.jpg" />
+
+  <!-- Favicon (Wilson avatar) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand">ProjectBaluga<span class="dot">.</span></a>
+      <nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--1"></span>
+        <span class="blob blob--2"></span>
+        <span class="blob blob--3"></span>
+        <span class="grid-overlay"></span>
+      </div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow"><span class="wave">👋</span> Hi, my name is</p>
+        <h1 class="hero__title">Wilson Villanueva</h1>
+        <h2 class="hero__subtitle">
+          <span class="rotator" id="rotator">Developer</span>
+        </h2>
+        <p class="hero__lead">
+          I build full-stack web platforms, network tooling, and the occasional
+          piece of hardware firmware. My main project is
+          <strong>FairLink</strong> — an ISP &amp; hotspot management system on
+          the MERN stack and Docker — built with a lot of help from AI. This
+          site shows what I've made so far.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View my work</a>
+        </div>
+        <ul class="hero__stats">
+          <li><span class="stat__num" data-count="2">0</span><span class="stat__label">Major Projects</span></li>
+          <li><span class="stat__num" data-count="15" data-suffix="+">0</span><span class="stat__label">Technologies Used</span></li>
+          <li><span class="stat__num" data-count="6">0</span><span class="stat__label">Docker Services</span></li>
+        </ul>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span class="hero__scroll-mouse"></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">01.</span> About me</h2>
+        <div class="about">
+          <div class="about__text">
+            <p>
+              I'm Wilson, a developer from Camarines Sur. My main project is
+              <strong>FairLink</strong> — an ISP &amp; hotspot management
+              platform with billing, subscriber records, voucher generation,
+              MikroTik router control, and a kiosk system, built on the MERN
+              stack and Docker. Alongside it I've worked on an Android
+              companion app, ESP8266 firmware, and a Windows anti-cheat
+              experiment called <strong>SafePlay</strong>.
+            </p>
+            <p>
+              I don't have an IT degree. I learned by building, with a lot of
+              help from AI tools, and these projects are the result. I'm still
+              learning every day, and honestly that's the part I enjoy most.
+            </p>
+            <p>Tools I use most:</p>
+            <ul class="about__list">
+              <li>React &amp; Node.js</li>
+              <li>MongoDB &amp; Docker</li>
+              <li>MikroTik RouterOS</li>
+              <li>FreeRADIUS &amp; WireGuard</li>
+              <li>C# / .NET (WPF)</li>
+              <li>C++ &amp; ESP8266</li>
+            </ul>
+          </div>
+          <div class="about__photo">
+            <div class="about__photo-frame">
+              <img class="about__photo-img" src="assets/wilson.jpg" alt="Wilson Villanueva"
+                   onerror="this.classList.add('is-missing');" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">02.</span> Skills</h2>
+        <div class="skills">
+          <article class="skill-card">
+            <h3>Languages</h3>
+            <p>JavaScript first; C# and C++ when needed.</p>
+            <ul>
+              <li>JavaScript (Node, React, Express)</li>
+              <li>C# (.NET 8 / WPF)</li>
+              <li>C++ (Arduino / ESP8266)</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Web &amp; APIs</h3>
+            <p>The stack FairLink is built on.</p>
+            <ul>
+              <li>React (Vite), REST APIs</li>
+              <li>Socket.io, MongoDB / Mongoose</li>
+              <li>JWT auth, Helmet, rate limiting</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>DevOps</h3>
+            <p>How I deploy and run things.</p>
+            <ul>
+              <li>Docker &amp; Docker Compose</li>
+              <li>Nginx, Git / GitHub</li>
+              <li>FreeRADIUS, WireGuard VPN</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Networking</h3>
+            <p>Routing, wireless, and deployment.</p>
+            <ul>
+              <li>MikroTik RouterOS (v6 / v7)</li>
+              <li>Ubiquiti, fiber deployment</li>
+              <li>PPPoE / IPoE, bandwidth mgmt</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Hardware &amp; IoT</h3>
+            <p>Firmware, assembly, and cabling.</p>
+            <ul>
+              <li>System assembly &amp; diagnostics</li>
+              <li>ESP8266 IoT firmware</li>
+              <li>Network cabling</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3>Platforms &amp; Testing</h3>
+            <p>Where my projects run.</p>
+            <ul>
+              <li>Linux, Windows Server</li>
+              <li>Android, iOS, .NET WPF desktop</li>
+              <li>Jest, Vitest, Supertest</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">03.</span> Projects</h2>
+        <!-- FairLink -->
+        <article class="project">
+          <div class="project__head">
+            <div>
+              <span class="project__eyebrow">Main Project · Full-Stack Platform</span>
+              <h3 class="project__title">FairLink</h3>
+              <p class="project__tagline">ISP &amp; Hotspot Management System</p>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/projectbaluga/fairlink" target="_blank" rel="noopener" class="project__link">GitHub ↗</a>
+            </div>
+          </div>
+
+          <p class="project__overview">
+            A complete ISP &amp; hotspot management system built on the
+            <strong>MERN stack and Docker</strong>, with AI assisting
+            throughout development. It covers billing, subscriber CRM,
+            MikroTik router control, hotspot vouchers, a coin-operated kiosk
+            system, and an Android companion app for field work — all running
+            together as one containerized platform.
+          </p>
+
+          <!-- At a glance -->
+          <ul class="metrics">
+            <li><span class="metrics__num">6</span><span class="metrics__label">Docker services</span></li>
+            <li><span class="metrics__num">30+</span><span class="metrics__label">Data models</span></li>
+            <li><span class="metrics__num">58+</span><span class="metrics__label">UI components</span></li>
+            <li><span class="metrics__num">35+</span><span class="metrics__label">Backend tests</span></li>
+            <li><span class="metrics__num">12</span><span class="metrics__label">Dashboard modules</span></li>
+          </ul>
+
+          <!-- Screenshot carousel -->
+          <p class="shots__label">📸 Live screenshots — tap any image for fullscreen</p>
+          <div class="carousel" data-carousel>
+            <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="Previous screenshot">‹</button>
+            <div class="carousel__viewport">
+              <div class="carousel__track" data-track>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-dashboard.jpg" alt="FairLink admin dashboard — system status, billing stat cards and subscriber list" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>Admin Dashboard — billing CRM &amp; live system monitoring</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-reports.jpg" alt="FairLink Intelligence Hub — business reports and analytics" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>Intelligence Hub — revenue &amp; collection analytics</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-workstations.jpg" alt="FairLink workstation management — live PC monitoring by zone" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>Workstation Manager — real-time PC control by zone</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-hotspot.jpg" alt="FairLink RADIUS management — hotspot profiles and auth server status" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>RADIUS / Hotspot — auth server &amp; voucher plans</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-inventory.jpg" alt="FairLink inventory management — SKU and stock control" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>Inventory Management — SKU &amp; stock control</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-vpn.jpg" alt="FairLink WireGuard VPN management — server status and clients" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>WireGuard VPN — remote router access dashboard</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-landing.jpg" alt="FairLink public ISP portal — billing lookup and internet plans" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>Public ISP Portal — instant billing lookup &amp; plans</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-portal.jpg" alt="FairLink hotspot captive portal — voucher and member login" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>Hotspot Captive Portal — voucher &amp; member login</figcaption>
+                </figure>
+                <figure class="slide">
+                  <button class="shot__frame" data-zoom aria-label="View fullscreen">
+                    <span class="shot__dots"><i></i><i></i><i></i></span>
+                    <img src="assets/fairlink-lockscreen.jpg" alt="FairLink gaming kiosk lockscreen — session login with top-up options" loading="lazy" />
+                    <span class="shot__zoom">⤢</span>
+                  </button>
+                  <figcaption>Gaming Kiosk Lockscreen — coin-operated sessions</figcaption>
+                </figure>
+              </div>
+            </div>
+            <button class="carousel__arrow carousel__arrow--next" data-next aria-label="Next screenshot">›</button>
+            <div class="carousel__dots" data-dots></div>
+          </div>
+
+          <div class="project__grid">
+            <div class="feature">
+              <h4>💳 Billing</h4>
+              <p>Automatic monthly invoicing, pro-rated charges, partial payments, and PDF statements.</p>
+            </div>
+            <div class="feature">
+              <h4>📊 Dashboard &amp; CRM</h4>
+              <p>Subscriber management, financial summaries, and a live map of field technicians.</p>
+            </div>
+            <div class="feature">
+              <h4>📡 Hotspot &amp; Vouchers</h4>
+              <p>FreeRADIUS authentication, bulk voucher printing, and live session monitoring.</p>
+            </div>
+            <div class="feature">
+              <h4>🌐 Router Control</h4>
+              <p>Direct MikroTik API integration — enable, disable, and monitor subscribers from the dashboard.</p>
+            </div>
+            <div class="feature">
+              <h4>🎮 Kiosk System</h4>
+              <p>Coin-operated PC sessions with ESP8266 hardware, remote lock/unlock, and receipt printing.</p>
+            </div>
+            <div class="feature">
+              <h4>🎫 Support &amp; Inventory</h4>
+              <p>Real-time ticket chat and barcode-based stock tracking.</p>
+            </div>
+            <div class="feature">
+              <h4>📱 Android App</h4>
+              <p>Field app for technicians: GPS reporting, tickets, and subscriber lookup.</p>
+            </div>
+            <div class="feature">
+              <h4>🔒 Security</h4>
+              <p>JWT auth, role-based permissions, encryption at rest, and account lockout.</p>
+            </div>
+          </div>
+
+          <!-- Under the hood -->
+          <div class="project__detail">
+            <h4 class="project__detail-title">How it works</h4>
+            <div class="project__detail-grid">
+              <div>
+                <h5>Architecture</h5>
+                <p>Six Docker services working together — React frontend, Express API, MongoDB, FreeRADIUS, WireGuard VPN, and a socket proxy.</p>
+              </div>
+              <div>
+                <h5>Real-time</h5>
+                <p>WebSockets keep technician GPS, ticket chat, and kiosk sessions in sync across every device.</p>
+              </div>
+              <div>
+                <h5>Automation</h5>
+                <p>The daily billing cycle, overdue-subscriber syncing to routers, and kiosk time deductions all run on their own.</p>
+              </div>
+              <div>
+                <h5>Networking</h5>
+                <p>Talks to MikroTik routers over API, handles both PPPoE and IPoE connections, and manages hotspot sessions end to end.</p>
+              </div>
+            </div>
+          </div>
+
+          <ul class="project__tags">
+            <li>React 18</li>
+            <li>Vite</li>
+            <li>Tailwind CSS</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>Socket.io</li>
+            <li>Docker</li>
+            <li>FreeRADIUS</li>
+            <li>WireGuard</li>
+            <li>MikroTik API</li>
+            <li>.NET / WPF</li>
+            <li>ESP8266</li>
+            <li>Android</li>
+            <li>iOS</li>
+          </ul>
+        </article>
+
+        <!-- SafePlay -->
+        <article class="project">
+          <div class="project__head">
+            <div>
+              <span class="project__eyebrow">Side Project · Systems / Security</span>
+              <h3 class="project__title">SafePlay</h3>
+              <p class="project__tagline">Anti-Cheat Tool for Online Games</p>
+            </div>
+            <div class="project__links">
+              <a href="https://github.com/projectbaluga/safeplay" target="_blank" rel="noopener" class="project__link">GitHub ↗</a>
+            </div>
+          </div>
+
+          <p class="project__overview">
+            A side project exploring how anti-cheat tools work. It's a
+            <strong>Windows DLL</strong> for Ragnarok Online clients that
+            serves a trusted configuration from memory, verifies game files,
+            and checks for known cheat tools — paired with a launcher that
+            makes sure the game starts clean. Written in C++ with AI
+            assistance.
+          </p>
+
+          <div class="project__grid">
+            <div class="feature">
+              <h4>🔒 Configuration</h4>
+              <p>Keeps game server settings stored safely in the DLL so they can't be easily changed.</p>
+            </div>
+            <div class="feature">
+              <h4>✅ File Check</h4>
+              <p>Verifies game files haven't been tampered with before allowing the game to start.</p>
+            </div>
+            <div class="feature">
+              <h4>🪝 File Patching</h4>
+              <p>Intercepts file access attempts to protect configuration from being modified.</p>
+            </div>
+            <div class="feature">
+              <h4>🛰️ Cheat Detection</h4>
+              <p>Regularly checks for known cheat tools running in the background.</p>
+            </div>
+            <div class="feature">
+              <h4>🚀 Protected Launch</h4>
+              <p>Game only runs through a special launcher to ensure protections are in place.</p>
+            </div>
+            <div class="feature">
+              <h4>💬 Notifications</h4>
+              <p>Shows the player what's blocking them if a cheat tool is detected.</p>
+            </div>
+          </div>
+
+          <ul class="project__tags">
+            <li>C++</li>
+            <li>Windows API</li>
+            <li>DLL Injection</li>
+            <li>IAT Hooking</li>
+            <li>Visual Studio 2022</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <h2 class="section__title section__title--center"><span class="section__num">04.</span> Get in touch</h2>
+        <p class="contact__lead">
+          I'm open to freelance work and collaborations — web apps, network
+          projects, or anything interesting. If you think I can help, send me
+          a message.
+        </p>
+        <div class="contact__info">
+          <a href="mailto:projectbaluga@gmail.com">✉️ projectbaluga@gmail.com</a>
+          <a href="tel:+639760153463">📱 +63 976 015 3463</a>
+          <span>📍 Pili, Camarines Sur, Philippines</span>
+        </div>
+        <div class="contact__cta">
+          <a href="mailto:projectbaluga@gmail.com" class="btn btn--primary btn--lg">Say hello</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__social">
+        <a href="https://github.com/projectbaluga" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:projectbaluga@gmail.com">Email</a>
+      </div>
+      <p>Built by Wilson Villanueva, with help from AI · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox (fullscreen image viewer) -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" data-lb-close aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" data-lb-prev aria-label="Previous">‹</button>
+    <figure class="lightbox__stage">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+      <figcaption class="lightbox__caption" id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" data-lb-next aria-label="Next">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
