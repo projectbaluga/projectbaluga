@@ -1457,6 +1457,44 @@ body.nav-open .nav-backdrop {
 
 .case__grid--compact { grid-template-columns: repeat(3, 1fr); }
 
+/* Feature group label (core vs. add-on) */
+.case__group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-2);
+}
+
+.case__group::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.case__group-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.case__group-tag--addon {
+  background: transparent;
+  color: var(--text-2);
+  border: 1.5px dashed var(--border-2);
+}
+
 .feature {
   background: transparent;
   border: 1px solid var(--border);

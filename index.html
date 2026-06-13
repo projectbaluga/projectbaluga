@@ -405,19 +405,22 @@
           </header>
 
           <p class="case__overview">
-            A complete ISP &amp; hotspot management system built on the
-            <strong>MERN stack and Docker</strong>. It covers billing, subscriber CRM, MikroTik router
-            control, hotspot vouchers, a coin-operated kiosk system, and an
-            Android companion app for field work — all running together as one
-            containerized platform.
+            At its core, FairLink is an <strong>ISP &amp; hotspot management
+            system</strong> on the MERN stack and Docker — subscriber billing, a
+            CRM with real-time support chat and ticketing, and MikroTik
+            (PPPoE/IPoE) + FreeRADIUS network control. On top of that I built a
+            comprehensive <strong>internet-café / workstation add-on</strong> —
+            coin-operated PC sessions, a canteen point-of-sale, and a
+            print-to-cashier queue — so the whole business runs from one platform,
+            with companion apps for Android, iOS, and Windows.
           </p>
 
           <ul class="metrics">
             <li><span class="metrics__num" data-count="6">6</span><span class="metrics__label">Docker services</span></li>
-            <li><span class="metrics__num" data-count="30" data-suffix="+">30+</span><span class="metrics__label">Data models</span></li>
-            <li><span class="metrics__num" data-count="58" data-suffix="+">58+</span><span class="metrics__label">UI components</span></li>
-            <li><span class="metrics__num" data-count="35" data-suffix="+">35+</span><span class="metrics__label">Backend tests</span></li>
-            <li><span class="metrics__num" data-count="12">12</span><span class="metrics__label">Dashboard modules</span></li>
+            <li><span class="metrics__num" data-count="32">32</span><span class="metrics__label">Data models</span></li>
+            <li><span class="metrics__num" data-count="64">64</span><span class="metrics__label">UI components</span></li>
+            <li><span class="metrics__num" data-count="39">39</span><span class="metrics__label">Backend tests</span></li>
+            <li><span class="metrics__num" data-count="11">11</span><span class="metrics__label">Dashboard modules</span></li>
           </ul>
 
           <!-- Screenshot carousel -->
@@ -537,46 +540,81 @@
             </div>
           </div>
 
+          <h4 class="case__group"><span class="case__group-tag">Core</span> ISP platform</h4>
           <div class="case__grid">
             <div class="feature spot" data-spot>
               <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-credit-card"/></svg></div>
-              <h4>Billing</h4>
-              <p>Automatic monthly invoicing, pro-rated charges, partial payments, and PDF statements.</p>
+              <h4>Billing &amp; Cycles</h4>
+              <p>Anniversary billing with a full cycle-change history, opt-in month-end anchor mode, pro-rated rebates for downtime, partial payments, and PDF statements of account.</p>
             </div>
             <div class="feature spot" data-spot>
               <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-dashboard"/></svg></div>
               <h4>Dashboard &amp; CRM</h4>
-              <p>Subscriber management, financial summaries, and a live map of field technicians.</p>
+              <p>Subscriber lifecycle, financial analytics, issue tracking, and a live Leaflet map of field staff.</p>
+            </div>
+            <div class="feature spot" data-spot>
+              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-message"/></svg></div>
+              <h4>Live Chat</h4>
+              <p>Real-time messaging over Socket.io — subscribers chat with support, conversations thread onto tickets, and field technicians coordinate with the office, synced across the dashboard and companion apps.</p>
             </div>
             <div class="feature spot" data-spot>
               <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-wifi"/></svg></div>
               <h4>Hotspot &amp; Vouchers</h4>
-              <p>FreeRADIUS authentication, bulk voucher printing, and live session monitoring.</p>
+              <p>FreeRADIUS auth delegated to the API, a captive portal, bulk voucher generation, live sessions, and CoA / disconnect.</p>
             </div>
             <div class="feature spot" data-spot>
               <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-router"/></svg></div>
               <h4>Router Control</h4>
-              <p>Direct MikroTik API integration — enable, disable, and monitor subscribers from the dashboard.</p>
-            </div>
-            <div class="feature spot" data-spot>
-              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-gamepad"/></svg></div>
-              <h4>Kiosk System</h4>
-              <p>Coin-operated PC sessions with ESP8266 hardware, remote lock/unlock, and receipt printing.</p>
+              <p>MikroTik API for PPPoE secrets and IPoE (DHCP lease, simple queue, IP binding), with encrypted credentials and health checks.</p>
             </div>
             <div class="feature spot" data-spot>
               <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-ticket"/></svg></div>
-              <h4>Support &amp; Inventory</h4>
-              <p>Real-time ticket chat and barcode-based stock tracking.</p>
+              <h4>Support &amp; Tickets</h4>
+              <p>Ticket workflow with comments, assignment, and resolution tracking, with live status updates over Socket.io and linked field-technician reports.</p>
+            </div>
+            <div class="feature spot" data-spot>
+              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-package"/></svg></div>
+              <h4>Inventory &amp; Deployments</h4>
+              <p>Barcode / serial stock tracking with audit history, equipment deployments to subscribers, and a technician stock-request workflow.</p>
+            </div>
+            <div class="feature spot" data-spot>
+              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg></div>
+              <h4>Field Ops &amp; SOS</h4>
+              <p>Live staff GPS tracking on a Leaflet map, subscriber SOS mode with grace windows, and real-time online presence.</p>
             </div>
             <div class="feature spot" data-spot>
               <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-smartphone"/></svg></div>
-              <h4>Android App</h4>
-              <p>Field app for technicians: GPS reporting, tickets, and subscriber lookup.</p>
+              <h4>Companion Apps</h4>
+              <p>Native Android (Java) and iOS (Swift) WebView wrappers around the dashboard, with GPS, camera, and file-upload bridges.</p>
             </div>
             <div class="feature spot" data-spot>
               <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div>
               <h4>Security</h4>
-              <p>JWT auth, role-based permissions, encryption at rest, and account lockout.</p>
+              <p>JWT auth, role-based permissions, field-level encryption at rest, CSRF tokens, and rate-limited login.</p>
+            </div>
+          </div>
+
+          <h4 class="case__group"><span class="case__group-tag case__group-tag--addon">Add-on</span> Café / workstation</h4>
+          <div class="case__grid">
+            <div class="feature spot" data-spot>
+              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-gamepad"/></svg></div>
+              <h4>Coin-Op Sessions</h4>
+              <p>Minute-based desktop accounts and sessions with a per-minute timer, ESP8266 coin-acceptor top-ups, thermal-printed vouchers, and a Windows .NET / WPF lockscreen that locks each PC.</p>
+            </div>
+            <div class="feature spot" data-spot>
+              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-credit-card"/></svg></div>
+              <h4>Canteen POS</h4>
+              <p>An Order-based point-of-sale wired to inventory stock movements, served to both staff and the self-service kiosk.</p>
+            </div>
+            <div class="feature spot" data-spot>
+              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-file-check"/></svg></div>
+              <h4>Print to Cashier</h4>
+              <p>Kiosk Ctrl+P jobs land straight in the cashier's print queue — preview, print, then mark collected, with per-page rates.</p>
+            </div>
+            <div class="feature spot" data-spot>
+              <div class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></div>
+              <h4>Rewards &amp; Leaderboard</h4>
+              <p>A weekly café leaderboard with automated rewards and referral bonuses to keep regulars coming back.</p>
             </div>
           </div>
 
@@ -587,19 +625,19 @@
               <div class="case__detail-grid">
                 <div>
                   <h5><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg> Architecture</h5>
-                  <p>Six Docker services working together — React frontend, Express API, MongoDB, FreeRADIUS, WireGuard VPN, and a socket proxy.</p>
+                  <p>Six Docker services on an isolated bridge network — a React/Nginx frontend, a localhost-bound Express API, MongoDB, FreeRADIUS, a WireGuard VPN, and a read-only Docker socket proxy.</p>
                 </div>
                 <div>
                   <h5><svg class="icon" aria-hidden="true"><use href="#i-zap"/></svg> Real-time</h5>
-                  <p>WebSockets keep technician GPS, ticket chat, and kiosk sessions in sync across every device.</p>
+                  <p>Socket.io keeps live chat, technician GPS, ticket activity, kiosk sessions, and SOS status in sync across every device.</p>
                 </div>
                 <div>
                   <h5><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg> Automation</h5>
-                  <p>The daily billing cycle, overdue-subscriber syncing to routers, and kiosk time deductions all run on their own.</p>
+                  <p>Cron jobs handle the daily billing accrual, overdue-subscriber syncing to MikroTik, payment deadlines, per-minute kiosk timers, and weekly café rewards.</p>
                 </div>
                 <div>
                   <h5><svg class="icon" aria-hidden="true"><use href="#i-network"/></svg> Networking</h5>
-                  <p>Talks to MikroTik routers over API, handles both PPPoE and IPoE connections, and manages hotspot sessions end to end.</p>
+                  <p>Talks to MikroTik over its API for both PPPoE and IPoE, delegates RADIUS auth and accounting to the backend, and reaches routers behind CGNAT through the built-in WireGuard VPN.</p>
                 </div>
               </div>
             </div>
@@ -626,8 +664,9 @@
 
           <ul class="tags">
             <li>React 18</li><li>Vite</li><li>Tailwind CSS</li><li>Node.js</li><li>Express</li>
-            <li>MongoDB</li><li>Socket.io</li><li>Docker</li><li>FreeRADIUS</li><li>WireGuard</li>
-            <li>MikroTik API</li><li>.NET / WPF</li><li>ESP8266</li><li>Android</li><li>iOS</li>
+            <li>MongoDB</li><li>Mongoose</li><li>Socket.io</li><li>Nginx</li><li>Docker</li>
+            <li>FreeRADIUS</li><li>WireGuard</li><li>MikroTik API</li><li>JWT</li><li>.NET / WPF</li>
+            <li>ESP8266</li><li>Android</li><li>iOS</li>
           </ul>
         </article>
 
