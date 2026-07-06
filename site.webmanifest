@@ -1,0 +1,60 @@
+{
+  "name": "Wilson Villanueva — Developer",
+  "short_name": "ProjectBaluga",
+  "description": "Self-taught full-stack developer specializing in ISP management platforms, network tooling, and enterprise systems. Creator of FairLink.",
+  "start_url": "https://projectbaluga.github.io/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#08090d",
+  "theme_color": "#8b7dff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/og-image.jpg",
+      "sizes": "540x720",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["business", "developer"],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "See my work and case studies",
+      "url": "https://projectbaluga.github.io/#projects",
+      "icons": [
+        {
+          "src": "assets/favicon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Get in Touch",
+      "short_name": "Contact",
+      "description": "Send me a message or email",
+      "url": "https://projectbaluga.github.io/#contact",
+      "icons": [
+        {
+          "src": "assets/favicon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
